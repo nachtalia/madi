@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheila Mae's 18th Birthday</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #edd574;
+            --deep-lavender: #c58acf;
+            --medium-lavender: #d094d6;
+            --light-lavender: #e0c2ff;
+            --blush-ivory: #f5e5d0;
+            --lavender: #D8B4FE;
+            --blush: #F9A8D4;
+            --cream: #FFF8F2;
+            --dark: #3E2C41;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--cream);
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        /* Make all images fit their containers perfectly */
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+
+        .lanterns-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+
+        .lantern {
+            position: absolute;
+            width: 40px;
+            height: 60px;
+            background: linear-gradient(to bottom, #fef3c7, var(--gold));
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: floatUp linear infinite;
+            opacity: 0.9;
+            box-shadow: 0 0 30px rgba(237, 213, 116, 0.6);
+        }
+
+        .lantern::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 5px;
+            background: #92400e;
+            border-radius: 2px;
+        }
+
+        .lantern::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 20px;
+            background: #92400e;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.9;
+            }
+            90% {
+                opacity: 0.9;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(50px) rotate(5deg);
+                opacity: 0;
+            }
+        }
+
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .star {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 2s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .castle {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(3rem, 10vw, 6rem);
+            color: var(--gold);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px rgba(237, 213, 116, 0.5);
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 30px rgba(237, 213, 116, 0.5); }
+            50% { text-shadow: 0 0 50px rgba(237, 213, 116, 0.8); }
+        }
+
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            color: white;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .hero p {
+            color: var(--lavender);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: linear-gradient(135deg, var(--gold), #f59e0b);
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 30px rgba(237, 213, 116, 0.4);
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(237, 213, 116, 0.6);
+        }
+
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--dark);
+            margin-bottom: 3rem;
+        }
+
+        .story-section {
+            background: linear-gradient(135deg, var(--blush-ivory) 0%, var(--light-lavender) 100%);
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--gold), var(--deep-lavender));
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50%;
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: 50%;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            max-width: 350px;
+            margin-right: 30px;
+            position: relative;
+            border: 2px solid rgba(244, 211, 94, 0.3);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: 0;
+            margin-left: 30px;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            background: var(--gold);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(237, 213, 116, 0.5);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            right: auto;
+            left: -15px;
+        }
+
+        .timeline-content h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .countdown-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+        }
+
+        .countdown-section .section-title {
+            color: var(--gold);
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            min-width: 120px;
+            border: 1px solid rgba(244, 211, 94, 0.3);
+        }
+
+        .countdown-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gold);
+            display: block;
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 0.5rem;
+        }
+
+        .event-section {
+            background: var(--cream);
+        }
+
+        .event-card {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1), 0 0 30px rgba(237, 213, 116, 0.2);
+            text-align: center;
+            border: 3px solid var(--gold);
+            position: relative;
+        }
+
+        .event-card::before,
+        .event-card::after {
+            content: '✦';
+            position: absolute;
+            font-size: 2rem;
+            color: var(--gold);
+        }
+
+        .event-card::before {
+            top: 10px;
+            left: 20px;
+        }
+
+        .event-card::after {
+            bottom: 10px;
+            right: 20px;
+        }
+
+        .event-card h3 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 2rem;
+        }
+
+        .event-detail {
+            margin-bottom: 1.5rem;
+        }
+
+        .event-detail strong {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--gold);
+            margin-bottom: 0.3rem;
+        }
+
+        .gallery-section {
+            background: linear-gradient(135deg, var(--light-lavender) 0%, var(--blush-ivory) 100%);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--deep-lavender), var(--medium-lavender), var(--light-lavender));
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+            border: 5px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Elegant Carousel */
+        .carousel-section,
+        .memories-carousel-section {
+            background: linear-gradient(135deg, var(--cream) 0%, var(--light-lavender) 100%);
+        }
+
+        .carousel-container,
+        .memories-carousel-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.25), 0 0 60px rgba(237, 213, 116, 0.2);
+            border: 6px solid var(--gold);
+        }
+
+        .carousel,
+        .memories-carousel {
+            position: relative;
+            aspect-ratio: 16/10;
+            overflow: hidden;
+        }
+
+        .carousel-slides,
+        .memories-carousel-slides {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+        }
+
+        .carousel-slide,
+        .memories-carousel-slide {
+            min-width: 100%;
+            width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+
+        .carousel-slide img,
+        .memories-carousel-slide img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit:contain !important;
+            display: block !important;
+        }
+
+        .carousel-controls,
+        .memories-carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            padding: 0 1rem;
+            pointer-events: none;
+        }
+
+        .carousel-btn,
+        .memories-carousel-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold) 0%, #f5e5d0 100%);
+            border: 3px solid var(--deep-lavender);
+            color: var(--dark);
+            font-size: 1.8rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: auto;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-btn:hover,
+        .memories-carousel-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 30px rgba(237, 213, 116, 0.5);
+        }
+
+        .carousel-indicators,
+        .memories-carousel-indicators {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+        }
+
+        .carousel-indicator,
+        .memories-carousel-indicator {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px solid var(--gold);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-indicator.active,
+        .memories-carousel-indicator.active {
+            background: var(--gold);
+            transform: scale(1.3);
+            box-shadow: 0 0 15px var(--gold);
+        }
+
+        /* Music Control Button */
+        .music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold) 0%, #f5e5d0 100%);
+            border: 3px solid var(--deep-lavender);
+            color: var(--dark);
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            transition: all 0.3s ease;
+        }
+
+        .music-control:hover {
+            transform: scale(1.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 30px rgba(237, 213, 116, 0.5);
+        }
+
+        .music-control.playing {
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(237, 213, 116, 0.3);
+            }
+            50% {
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3), 0 0 40px rgba(237, 213, 116, 0.6);
+            }
+        }
+
+        .eighteen-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #3E2C41 100%);
+        }
+
+        .eighteen-section .section-title {
+            color: var(--gold);
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .flip-card {
+            width: 280px;
+            height: 350px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 2rem;
+        }
+
+        .flip-card-front {
+            background: linear-gradient(135deg, var(--gold), #f59e0b);
+            color: var(--dark);
+        }
+
+        .flip-card-front h3 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .flip-card-front span {
+            font-size: 4rem;
+        }
+
+        .flip-card-back {
+            background: white;
+            color: var(--dark);
+            transform: rotateY(180deg);
+            border: 3px solid var(--gold);
+        }
+
+        .flip-card-back p {
+            line-height: 1.8;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        footer p {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.8rem;
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(237, 213, 116, 0.5);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Envelope Styles */
+        .envelope-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #fce7f3 0%, #fef3c7 100%);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: opacity 0.8s, transform 0.8s;
+        }
+
+        .envelope-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(1.1);
+        }
+
+        .envelope {
+            position: relative;
+            width: 400px;
+            max-width: 90%;
+            height: 300px;
+            background: linear-gradient(135deg, #fef3c7, #fbbf24);
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .envelope-flap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: linear-gradient(135deg, #fcd34d, #f59e0b);
+            clip-path: polygon(0 0, 50% 100%, 100% 0);
+            z-index: 2;
+            transition: transform 0.6s ease;
+            transform-origin: top center;
+        }
+
+        .envelope:hover .envelope-flap {
+            transform: rotateX(45deg);
+        }
+
+        .envelope-seal {
+            position: absolute;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            border-radius: 50%;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(220, 38, 38, 0.4);
+        }
+
+        .envelope-seal span {
+            color: white;
+            font-size: 2rem;
+        }
+
+        .envelope-content {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            text-align: center;
+            color: #92400e;
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.8rem;
+        }
+
+        .click-hint {
+            margin-top: 30px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            color: #92400e;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Lantern Card Styles */
+        .lantern-card {
+            width: 200px;
+            height: 320px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.4s;
+            animation: floatLantern 4s ease-in-out infinite;
+        }
+
+        .lantern-card:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .lantern-card:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .lantern-card:nth-child(3) {
+            animation-delay: 2s;
+        }
+
+        .lantern-card:hover {
+            animation-play-state: paused;
+            transform: translateY(-20px);
+        }
+
+        @keyframes floatLantern {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .lantern-shape {
+            width: 100%;
+            height: 260px;
+            background: linear-gradient(to bottom, #fef3c7, var(--gold), #fbbf24);
+            border-radius: 50% 50% 40% 40% / 35% 35% 65% 65%;
+            box-shadow: 0 0 60px rgba(237, 213, 116, 0.6), 
+                        0 0 100px rgba(237, 213, 116, 0.3),
+                        inset 0 0 40px rgba(255, 255, 255, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 2rem 1rem;
+            position: relative;
+            transition: all 0.4s;
+            overflow: hidden;
+        }
+
+        /* Tangled-style sun symbol */
+        .lantern-sun {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 4rem;
+            color: #92400e;
+            opacity: 0.8;
+        }
+
+        /* Glowing flame inside */
+        .lantern-flame {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 30px;
+            background: linear-gradient(to top, #f59e0b, var(--gold), #fef3c7);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: flicker 0.5s ease-in-out infinite alternate;
+            box-shadow: 0 0 30px rgba(237, 213, 116, 0.8);
+        }
+
+        @keyframes flicker {
+            0% { transform: translateX(-50%) scale(1); opacity: 1; }
+            100% { transform: translateX(-50%) scale(1.1); opacity: 0.8; }
+        }
+
+        .lantern-card:hover .lantern-shape {
+            box-shadow: 0 0 80px rgba(237, 213, 116, 0.8), 
+                        0 0 120px rgba(237, 213, 116, 0.4),
+                        inset 0 0 50px rgba(255, 255, 255, 0.5);
+        }
+
+        .lantern-top {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 20px;
+            background: linear-gradient(to bottom, #92400e, #78350f);
+            border-radius: 5px 5px 0 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .lantern-ring {
+            position: absolute;
+            top: -28px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 35px;
+            height: 18px;
+            border: 4px solid #92400e;
+            border-bottom: none;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .lantern-shape .icon {
+            font-size: 3.5rem;
+            margin-top: 20px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .lantern-shape h3 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.8rem;
+            color: #78350f;
+            margin-top: 0.5rem;
+            z-index: 2;
+            position: relative;
+        }
+
+        .lantern-shape .description {
+            display: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.8rem;
+            color: #78350f;
+            text-align: center;
+            line-height: 1.5;
+            z-index: 2;
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .lantern-card.active .lantern-shape .description {
+            display: block;
+        }
+
+        .lantern-card.active .lantern-shape .icon,
+        .lantern-card.active .lantern-shape h3,
+        .lantern-card.active .lantern-shape .lantern-sun {
+            display: none;
+        }
+
+        .lantern-bottom {
+            position: absolute;
+            bottom: -45px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 45px;
+            background: linear-gradient(to bottom, #78350f, transparent);
+        }
+
+        .lantern-tassel {
+            position: absolute;
+            bottom: -45px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 25px;
+            height: 35px;
+            background: linear-gradient(to bottom, var(--gold), #d97706);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        .dresscode-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1), 0 0 40px rgba(237, 213, 116, 0.2);
+            text-align: center;
+            border: 3px solid var(--gold);
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .color-card {
+            height: 150px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 0.75rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .color-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .color-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--dark);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 0.4rem 0.5rem;
+            border-radius: 6px;
+            margin-bottom: 0.35rem;
+        }
+
+        .color-hex {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.7rem;
+            color: var(--dark);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 0.25rem 0.4rem;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        @media (max-width: 900px) {
+            .color-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .color-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+            
+            .color-card {
+                height: 130px;
+            }
+            
+            .dresscode-card {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                padding-left: 60px;
+                padding-right: 0;
+                justify-content: flex-start;
+            }
+
+            .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .timeline-content::before,
+            .timeline-item:nth-child(even) .timeline-content::before {
+                left: -45px;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Envelope Overlay -->
+    <div class="envelope-overlay" id="envelopeOverlay">
+        <div class="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-seal">
+                <span>🌻</span>
+            </div>
+            <div class="envelope-content">
+                A Special Invitation
+                <div class="click-hint">Click to Open ✨</div>
+            </div>
+        </div>
+    </div>
+
+    <section id="hero" class="hero">
+        <div class="lanterns-container" id="lanterns"></div>
+        <div class="stars" id="stars"></div>
+        <div class="hero-content">
+            <h1 style="font-size: 4rem;">Once Upon a Dream...</h1>
+            <h2>Join us as we celebrate the magical 18th birthday of</h2>
+            <p><strong style="font-family: 'Great Vibes', cursive; font-size: 6rem; color: var(--gold);">Sheila Mae Paragas</strong></p>
+            <p>July 10, 2026 at 5:00 PM</p>
+            <a href="#event" class="btn">You're Invited</a>
+        </div>
+    </section>
+
+    <section id="pictorial" class="carousel-section">
+        <h2 class="section-title">The Pictorial</h2>
+        <div class="carousel-container fade-in">
+            <div class="carousel">
+                <div class="carousel-slides" id="carouselSlides">
+                    <div class="carousel-slide">
+                        <img src="pictorial/0.jpg" alt="">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="pictorial/1.jpg" alt="">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="pictorial/2.jpg" alt="">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="pictorial/3.jpg" alt="">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="pictorial/4.jpg" alt="">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="pictorial/5.jpg" alt="">
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn" onclick="changeSlide(-1)">‹</button>
+                    <button class="carousel-btn" onclick="changeSlide(1)">›</button>
+                </div>
+                <div class="carousel-indicators" id="carouselIndicators"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="story" class="story-section">
+        <h2 class="section-title">Her Journey</h2>
+        <div class="timeline">
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <h3>Childhood</h3>
+                    <p>A little princess with big dreams, discovering the magic in every moment.</p>
+                </div>
+            </div>
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <h3>Growing Up</h3>
+                    <p>Learning, laughing, and blooming into the beautiful young woman she is today.</p>
+                </div>
+            </div>
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <h3>Dreams</h3>
+                    <p>Every dream is a wish her heart makes, and the stars are aligning.</p>
+                </div>
+            </div>
+            <div class="timeline-item fade-in">
+                <div class="timeline-content">
+                    <h3>Sweet 18</h3>
+                    <p>From dream to destiny – a new chapter begins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="countdown" class="countdown-section">
+        <h2 class="section-title">The Magic Awaits</h2>
+        <div class="countdown">
+            <div class="countdown-item">
+                <span class="countdown-number" id="days">00</span>
+                <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="hours">00</span>
+                <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="minutes">00</span>
+                <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="seconds">00</span>
+                <span class="countdown-label">Seconds</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="event" class="event-section">
+        <h2 class="section-title">The Celebration</h2>
+        <div class="event-card fade-in">
+            <h3>You're Cordially Invited</h3>
+            <div class="event-detail">
+                <strong>Date</strong>
+                <span>July 10, 2026</span>
+            </div>
+            <div class="event-detail">
+                <strong>Time</strong>
+                <span>5:00 PM</span>
+            </div>
+            <div class="event-detail">
+                <strong>Venue</strong>
+                <span>Felicia Hill Resort</span>
+            </div>
+            <div class="event-detail">
+                <strong>Dress Code</strong>
+                   <span>Semi Formal</span>
+                </span>
+            </div>
+            <div class="event-detail">
+                <strong>Theme</strong>
+                <span>From Dream to Destiny</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="dresscode" class="story-section">
+        <h2 class="section-title">Enchanted Colors</h2>
+        <div class="dresscode-card fade-in">
+            <h3 style="font-family: 'Great Vibes', cursive; font-size: 2.5rem; color: var(--dark); margin-bottom: 1.5rem;">Our Fairytale Palette</h3>
+            
+            <div class="color-grid">
+                <div class="color-card" style="background: #c58acf;">
+                    <div class="color-name">Deep Lavender</div>
+                    <div class="color-hex">#c58acf</div>
+                </div>
+                
+                <div class="color-card" style="background: #d094d6;">
+                    <div class="color-name">Medium Lavender</div>
+                    <div class="color-hex">#d094d6</div>
+                </div>
+                
+                <div class="color-card" style="background: #e0c2ff;">
+                    <div class="color-name">Light Lavender</div>
+                    <div class="color-hex">#e0c2ff</div>
+                </div>
+                
+                <div class="color-card" style="background: #f5e5d0;">
+                    <div class="color-name">Blush Ivory</div>
+                    <div class="color-hex">#f5e5d0</div>
+                </div>
+                
+                <div class="color-card" style="background: #edd574;">
+                    <div class="color-name">Golden Sunflower</div>
+                    <div class="color-hex">#edd574</div>
+                </div>
+            </div>
+            
+            <p style="margin-top: 1.5rem; color: #78350f; font-style: italic; font-family: 'Playfair Display', serif;">
+                Come dressed in fairytale elegance wearing these enchanted colors! ✨
+            </p>
+        </div>
+    </section>
+
+    <section id="gallery" class="memories-carousel-section">
+        <h2 class="section-title">Precious Memories</h2>
+        <div class="memories-carousel-container fade-in">
+            <div class="memories-carousel">
+                <div class="memories-carousel-slides" id="memoriesCarouselSlides">
+                    <div class="memories-carousel-slide">
+                        <img src="memories/0.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/1.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/2.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/3.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/4.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/5.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/6.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/7.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/8.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/9.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/10.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/11.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/12.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/13.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/14.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/15.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/16.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/17.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/18.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/19.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/20.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/21.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/22.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/23.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/24.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/25.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/26.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/27.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/28.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/29.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/30.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/31.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/32.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/33.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/34.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/35.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/36.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/37.jpg" alt="">
+                    </div>
+                    <div class="memories-carousel-slide">
+                        <img src="memories/38.jpg" alt="">
+                    </div>
+                </div>
+                <div class="memories-carousel-controls">
+                    <button class="memories-carousel-btn" onclick="changeMemoriesSlide(-1)">‹</button>
+                    <button class="memories-carousel-btn" onclick="changeMemoriesSlide(1)">›</button>
+                </div>
+                <div class="memories-carousel-indicators" id="memoriesCarouselIndicators"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="eighteen" class="eighteen-section">
+        <h2 class="section-title">Eighteen Treasures</h2>
+        <div class="cards-container">
+            <div class="lantern-card fade-in" onclick="toggleLantern(this)">
+                <div class="lantern-ring"></div>
+                <div class="lantern-top"></div>
+                <div class="lantern-shape">
+                    
+                    <span class="icon">🌹</span>
+                    <h3>18 Roses</h3>
+                    <p class="description">Eighteen special gentlemen will offer a rose and a dance, each representing a beautiful memory or wish for her future.</p>
+                    <div class="lantern-flame"></div>
+                </div>
+                <div class="lantern-bottom"></div>
+                <div class="lantern-tassel"></div>
+            </div>
+            <div class="lantern-card fade-in" onclick="toggleLantern(this)">
+                <div class="lantern-ring"></div>
+                <div class="lantern-top"></div>
+                <div class="lantern-shape">
+                    
+                    <span class="icon">🕯️</span>
+                    <h3>18 Candles</h3>
+                    <p class="description">Eighteen remarkable women will light a candle, sharing their wishes and prayers as she embarks on this new journey.</p>
+                    <div class="lantern-flame"></div>
+                </div>
+                <div class="lantern-bottom"></div>
+                <div class="lantern-tassel"></div>
+            </div>
+            <div class="lantern-card fade-in" onclick="toggleLantern(this)">
+                <div class="lantern-ring"></div>
+                <div class="lantern-top"></div>
+                <div class="lantern-shape">
+                    
+                    <span class="icon">🕯️</span>
+                    <h3>18 Candles</h3>
+                    <p class="description">Eighteen remarkable women will light a candle, sharing their wishes and prayers as she embarks on this new journey.</p>
+                    <div class="lantern-flame"></div>
+                </div>
+                <div class="lantern-bottom"></div>
+                <div class="lantern-tassel"></div>
+            </div>
+            <div class="lantern-card fade-in" onclick="toggleLantern(this)">
+                <div class="lantern-ring"></div>
+                <div class="lantern-top"></div>
+                <div class="lantern-shape">
+                    
+                    <span class="icon">🕯️</span>
+                    <h3>18 Candles</h3>
+                    <p class="description">Eighteen remarkable women will light a candle, sharing their wishes and prayers as she embarks on this new journey.</p>
+                    <div class="lantern-flame"></div>
+                </div>
+                <div class="lantern-bottom"></div>
+                <div class="lantern-tassel"></div>
+            </div>
+            <div class="lantern-card fade-in" onclick="toggleLantern(this)">
+                <div class="lantern-ring"></div>
+                <div class="lantern-top"></div>
+                <div class="lantern-shape">
+                    
+                    <span class="icon">🎈</span>
+                    <h3>18 Baloons</h3>
+                    <p class="description">Eighteen remarkable women will light a candle, sharing their wishes and prayers as she embarks on this new journey.</p>
+                    <div class="lantern-flame"></div>
+                </div>
+                <div class="lantern-bottom"></div>
+                <div class="lantern-tassel"></div>
+            </div>
+            <div class="lantern-card fade-in" onclick="toggleLantern(this)">
+                <div class="lantern-ring"></div>
+                <div class="lantern-top"></div>
+                <div class="lantern-shape">
+                    
+                    <span class="icon">💎</span>
+                    <h3>18 Treasures</h3>
+                    <p class="description">Eighteen meaningful gifts representing love, wisdom, and blessings from cherished family and friends.</p>
+                    <div class="lantern-flame"></div>
+                </div>
+                <div class="lantern-bottom"></div>
+                <div class="lantern-tassel"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Every lantern tells a story, and tonight begins a brand new chapter.</p>
+    </footer>
+
+    <script>
+        // Envelope functionality
+        const envelopeOverlay = document.getElementById('envelopeOverlay');
+        envelopeOverlay.addEventListener('click', () => {
+            envelopeOverlay.classList.add('hidden');
+        });
+
+        // Lantern card toggle
+        function toggleLantern(card) {
+            // Remove active class from other cards
+            document.querySelectorAll('.lantern-card').forEach(c => {
+                if (c !== card) {
+                    c.classList.remove('active');
+                }
+            });
+            // Toggle active class on clicked card
+            card.classList.toggle('active');
+        }
+
+        // Carousel class for reusable functionality
+        class Carousel {
+            constructor(slidesId, indicatorsId, buttonPrefix) {
+                this.currentSlide = 0;
+                this.slides = document.getElementById(slidesId);
+                this.totalSlides = this.slides.children.length; // Auto-count slides!
+                this.indicatorsContainer = document.getElementById(indicatorsId);
+                this.buttonPrefix = buttonPrefix;
+                this.autoPlayInterval = null;
+                
+                this.init();
+            }
+            
+            changeSlide(direction) {
+                this.currentSlide += direction;
+                if (this.currentSlide >= this.totalSlides) this.currentSlide = 0;
+                if (this.currentSlide < 0) this.currentSlide = this.totalSlides - 1;
+                this.updateCarousel();
+            }
+            
+            goToSlide(index) {
+                this.currentSlide = index;
+                this.updateCarousel();
+            }
+            
+            updateCarousel() {
+                this.slides.style.transform = `translateX(-${this.currentSlide * 100}%)`;
+                
+                const indicators = this.indicatorsContainer.querySelectorAll('div');
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === this.currentSlide);
+                });
+            }
+            
+            createIndicators() {
+                for (let i = 0; i < this.totalSlides; i++) {
+                    const indicator = document.createElement('div');
+                    indicator.className = this.buttonPrefix + 'indicator' + (i === 0 ? ' active' : '');
+                    indicator.addEventListener('click', () => this.goToSlide(i));
+                    this.indicatorsContainer.appendChild(indicator);
+                }
+            }
+            
+            startAutoPlay() {
+                this.autoPlayInterval = setInterval(() => {
+                    this.changeSlide(1);
+                }, 4000);
+            }
+            
+            stopAutoPlay() {
+                clearInterval(this.autoPlayInterval);
+            }
+            
+            init() {
+                this.createIndicators();
+                this.startAutoPlay();
+            }
+        }
+        
+        let pictorialCarousel;
+        let memoriesCarousel;
+        
+        // Change slide functions for both carousels
+        function changeSlide(direction) {
+            pictorialCarousel.changeSlide(direction);
+        }
+        
+        function changeMemoriesSlide(direction) {
+            memoriesCarousel.changeSlide(direction);
+        }
+        
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Pictorial carousel (auto-counts slides)
+            pictorialCarousel = new Carousel('carouselSlides', 'carouselIndicators', 'carousel-');
+            
+            // Initialize Memories carousel (auto-counts slides)
+            memoriesCarousel = new Carousel('memoriesCarouselSlides', 'memoriesCarouselIndicators', 'memories-carousel-');
+            
+            // Pause autoplay on hover for both carousels
+            const pictorialContainer = document.querySelector('.carousel-container');
+            pictorialContainer.addEventListener('mouseenter', () => pictorialCarousel.stopAutoPlay());
+            pictorialContainer.addEventListener('mouseleave', () => pictorialCarousel.startAutoPlay());
+            
+            const memoriesContainer = document.querySelector('.memories-carousel-container');
+            memoriesContainer.addEventListener('mouseenter', () => memoriesCarousel.stopAutoPlay());
+            memoriesContainer.addEventListener('mouseleave', () => memoriesCarousel.startAutoPlay());
+            
+            // Color card functionality - copy hex code
+            const colorCards = document.querySelectorAll('.color-card');
+            colorCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const hexElement = this.querySelector('.color-hex');
+                    const hexCode = hexElement.textContent;
+                    
+                    // Copy to clipboard
+                    navigator.clipboard.writeText(hexCode).then(() => {
+                        // Show a nice confirmation
+                        const originalText = hexElement.textContent;
+                        hexElement.textContent = '✓ Copied!';
+                        hexElement.style.background = 'rgba(34, 197, 94, 0.9)';
+                        
+                        setTimeout(() => {
+                            hexElement.textContent = originalText;
+                            hexElement.style.background = 'rgba(255, 255, 255, 0.8)';
+                        }, 1500);
+                    }).catch(err => {
+                        console.error('Failed to copy: ', err);
+                    });
+                });
+            });
+        });
+
+        function createLanterns() {
+            const container = document.getElementById('lanterns');
+            const lanternCount = 30;
+            
+            for (let i = 0; i < lanternCount; i++) {
+                const lantern = document.createElement('div');
+                lantern.className = 'lantern';
+                lantern.style.left = Math.random() * 100 + '%';
+                lantern.style.animationDuration = (Math.random() * 15 + 10) + 's';
+                lantern.style.animationDelay = (Math.random() * 10) + 's';
+                lantern.style.transform = `scale(${Math.random() * 0.5 + 0.5})`;
+                container.appendChild(lantern);
+            }
+        }
+
+        function createStars() {
+            const container = document.getElementById('stars');
+            const starCount = 100;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = (Math.random() * 2) + 's';
+                container.appendChild(star);
+            }
+        }
+
+        function updateCountdown() {
+            const eventDate = new Date('July 10, 2026 17:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            }
+        }
+
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.fade-in');
+            
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                
+                if (rect.top < windowHeight - 100) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        createLanterns();
+        createStars();
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+        handleScrollAnimations();
+        window.addEventListener('scroll', handleScrollAnimations);
+        
+        // Background Music Control
+        let bgMusic = new Audio('birthday-music.mp3');
+        bgMusic.loop = true;
+        bgMusic.volume = 0.3;
+        
+        const musicControl = document.getElementById('musicControl');
+        let isPlaying = false;
+        
+        musicControl.addEventListener('click', () => {
+            if (isPlaying) {
+                bgMusic.pause();
+                musicControl.textContent = '🎵';
+                musicControl.classList.remove('playing');
+            } else {
+                // Try to play (handles autoplay restrictions)
+                bgMusic.play().catch(() => {
+                    // If autoplay is blocked, just show the button
+                });
+                musicControl.textContent = '🔇';
+                musicControl.classList.add('playing');
+            }
+            isPlaying = !isPlaying;
+        });
+    </script>
+    
+    <!-- Background Music -->
+    <button class="music-control" id="musicControl">🎵</button>
+</body>
+</html>
