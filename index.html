@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1071,8 +1072,8 @@
         </div>
     </section>
 
-    <section id="pictorial" class="carousel-section">
-        <h2 class="section-title">The Pictorial</h2>
+    <section id="pictorial" class="carouse`l-section">
+        <h2 class="section-title">At last, I see The Light</h2>
         <div class="carousel-container fade-in">
             <div class="carousel">
                 <div class="carousel-slides" id="carouselSlides">
@@ -1223,7 +1224,7 @@
     </section>
 
     <section id="gallery" class="memories-carousel-section">
-        <h2 class="section-title">Precious Memories</h2>
+        <h2 class="section-title">Lanterns of Yesterday</h2>
         <div class="memories-carousel-container fade-in">
             <div class="memories-carousel">
                 <div class="memories-carousel-slides" id="memoriesCarouselSlides">
@@ -1594,13 +1595,6 @@
             
             const musicControl = document.getElementById('musicControl');
             let isPlaying = false;
-            
-            // Update isPlaying when music ends (though it loops, good practice)
-            bgMusic.addEventListener('ended', () => {
-                isPlaying = false;
-                musicControl.textContent = '🎵';
-                musicControl.classList.remove('playing');
-            });
             
             musicControl.addEventListener('click', () => {
                 if (isPlaying) {
