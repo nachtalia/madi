@@ -1105,10 +1105,18 @@
                 height: 300px;
             }
 
-            /* Carousel aspect ratio for mobile */
+            /* Carousel adjustments for mobile */
             .carousel,
             .memories-carousel {
-                aspect-ratio: 4/3;
+                aspect-ratio: auto;
+                min-height: 300px;
+            }
+
+            .carousel-slide img,
+            .memories-carousel-slide img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
             }
 
             /* Button */
@@ -1446,7 +1454,7 @@
             <div class="carousel">
                 <div class="carousel-slides" id="carouselSlides">
                     <div class="carousel-slide">
-                        <img src="pictorial/0.jpg" alt="">
+                        <img src="memories/14.jpg" alt="">
                     </div>
                     <div class="carousel-slide">
                         <img src="pictorial/1.jpg" alt="">
