@@ -1042,6 +1042,122 @@
                 left: -45px;
                 right: auto;
             }
+
+            /* Hero section mobile adjustments */
+            .hero h1 {
+                font-size: clamp(2rem, 8vw, 3.5rem) !important;
+            }
+
+            .hero p strong {
+                font-size: clamp(2.5rem, 8vw, 4rem) !important;
+            }
+
+            /* Section padding */
+            section {
+                padding: 3rem 1rem;
+            }
+
+            /* Countdown */
+            .countdown-item {
+                min-width: 80px;
+                padding: 1.25rem;
+            }
+
+            .countdown-number {
+                font-size: 2rem;
+            }
+
+            /* Carousel adjustments */
+            .carousel-btn,
+            .memories-carousel-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+
+            /* Event card */
+            .event-card {
+                padding: 2rem 1.5rem;
+            }
+
+            /* Lantern cards */
+            .lantern-card {
+                width: 160px;
+                height: 240px;
+            }
+
+            .lantern-shape {
+                height: 200px;
+                padding: 1.5rem 0.75rem;
+            }
+
+            .lantern-shape .icon {
+                font-size: 2.5rem;
+            }
+
+            .lantern-shape h3 {
+                font-size: 1.4rem;
+            }
+
+            /* Flip cards */
+            .flip-card {
+                width: 240px;
+                height: 300px;
+            }
+
+            /* Carousel aspect ratio for mobile */
+            .carousel,
+            .memories-carousel {
+                aspect-ratio: 4/3;
+            }
+
+            /* Button */
+            .btn {
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Even smaller screens */
+            .hero-content {
+                padding: 1rem;
+            }
+
+            .countdown {
+                gap: 0.75rem;
+            }
+
+            .countdown-item {
+                min-width: 70px;
+                padding: 1rem;
+            }
+
+            .countdown-number {
+                font-size: 1.75rem;
+            }
+
+            .carousel-btn,
+            .memories-carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .carousel-indicator,
+            .memories-carousel-indicator {
+                width: 10px;
+                height: 10px;
+            }
+
+            .lantern-card {
+                width: 140px;
+                height: 220px;
+            }
+
+            .lantern-shape {
+                height: 180px;
+            }
         }
     </style>
 </head>
@@ -1324,7 +1440,7 @@
         </div>
     </section>
 
-    <section id="pictorial" class="carouse`l-section">
+    <section id="pictorial" class="carousel-section">
         <h2 class="section-title">At last, I see The Light</h2>
         <div class="carousel-container fade-in">
             <div class="carousel">
